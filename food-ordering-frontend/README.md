@@ -4,7 +4,8 @@
 
 BigHungers frontend is a modern, responsive, and feature-rich React application for food ordering. It connects seamlessly to the backend API, providing users with a smooth experience for browsing restaurants, searching by city/cuisine, managing carts, placing orders, and tracking order status in real time. Built with Vite, React, TypeScript, Tailwind CSS, shadcn/ui, React Query, and Auth0, it is modular, scalable, and easy to extend or reuse in other projects.
 
-- **Live-Demo:** []()
+- **Frontend-Live:** [https://mern-food-ordering.netlify.app/](https://mern-food-ordering.netlify.app/)
+- **Backend-Live:** [https://mern-food-ordering-hnql.onrender.com](https://mern-food-ordering-hnql.onrender.com)
 
 ---
 

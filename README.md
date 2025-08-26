@@ -4,8 +4,8 @@
 
 BigHungers is a fullstack food ordering platform built with the MERN stack (MongoDB, Express.js, React, Node.js). It provides a modern, scalable, and production-ready solution for online food ordering, restaurant management, and real-time order tracking. The project is split into a robust backend REST API and a feature-rich, responsive frontend SPA, both designed for extensibility, modularity, and ease of learning or reuse.
 
-- **Frontend-Live:** []()
-- **Backend-Live:** []()
+- **Frontend-Live:** [https://mern-food-ordering.netlify.app/](https://mern-food-ordering.netlify.app/)
+- **Backend-Live:** [https://mern-food-ordering-hnql.onrender.com](https://mern-food-ordering-hnql.onrender.com)
 
 ---
 

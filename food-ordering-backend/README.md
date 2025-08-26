@@ -4,7 +4,8 @@
 
 BigHungers backend is a modern, production-ready REST API server for food ordering platforms. Built with Node.js, Express, TypeScript, and MongoDB, it powers user authentication (Auth0), restaurant and menu management, order processing, Stripe payments, and real-time order tracking. The backend is modular, secure, and easily extensible—designed for seamless integration with any frontend and scalable for real-world deployments.
 
-- **Live-Demo:** []()
+- **Frontend-Live:** [https://mern-food-ordering.netlify.app/](https://mern-food-ordering.netlify.app/)
+- **Backend-Live:** [https://mern-food-ordering-hnql.onrender.com](https://mern-food-ordering-hnql.onrender.com)
 
 ---
 
