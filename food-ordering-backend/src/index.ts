@@ -26,6 +26,13 @@ app.use("/api/order/checkout/webhook", express.raw({ type: "*/*" }));
 
 app.use(express.json());
 
+// Root route for Render deployment
+app.get("/", (req: Request, res: Response) => {
+  res.send(
+    `<h1>🍔 BigHungers Food Ordering Backend is Running!</h1><p>Welcome to the API server. See <a href='https://github.com/arnobt78/MERN-Food-Ordering--React-FullStack'>project docs</a> for usage.</p>`
+  );
+});
+
 app.get("/health", async (req: Request, res: Response) => {
   res.send({ message: "health OK!" });
 });
