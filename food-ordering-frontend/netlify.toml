@@ -1,6 +1,7 @@
+
 # Netlify configuration for SPA routing
 [build]
-  publish = "."
+  publish = "dist"
 
 [[redirects]]
   from = "/api/*"
