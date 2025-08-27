@@ -1,6 +1,16 @@
 # BigHungers Food Ordering Website - React, MongoDB, Express.js, Node.js MERN Project
 
-<img width="1030" height="869" alt="Screenshot 2025-08-27 at 16 26 41" src="https://github.com/user-attachments/assets/8b1f2198-21a4-4db2-b7a6-e469b8a766df" /> <img width="1081" height="907" alt="Screenshot 2025-08-27 at 16 27 08" src="https://github.com/user-attachments/assets/81126966-5cbf-46c1-a331-262ee2c4f86f" /> <img width="1380" height="549" alt="Screenshot 2025-08-27 at 16 27 53" src="https://github.com/user-attachments/assets/a85b0630-51ea-4716-97b3-a39ba165d0a8" /> <img width="1379" height="924" alt="Screenshot 2025-08-27 at 16 28 22" src="https://github.com/user-attachments/assets/2d96d0f5-b8fa-428b-88b2-470d249bb656" /> <img width="1295" height="827" alt="Screenshot 2025-08-27 at 16 28 36" src="https://github.com/user-attachments/assets/dd384314-af29-4124-8e5f-794d4ac0ee06" /> <img width="975" height="726" alt="Screenshot 2025-08-27 at 16 29 03" src="https://github.com/user-attachments/assets/bf0c20fb-217c-479a-bf37-d7fb46d78b45" /> <img width="1372" height="906" alt="Screenshot 2025-08-27 at 16 30 03" src="https://github.com/user-attachments/assets/dfef496a-a4c2-4f6c-a1d7-5024680231dd" /> <img width="1343" height="838" alt="Screenshot 2025-08-27 at 16 31 13" src="https://github.com/user-attachments/assets/c9927bcc-016e-4b99-8a59-2a526670c1ed" /> <img width="1337" height="692" alt="Screenshot 2025-08-27 at 16 31 23" src="https://github.com/user-attachments/assets/d9737049-7c0a-4ef8-9aa0-5a728ca3f5b9" /> <img width="1354" height="887" alt="Screenshot 2025-08-27 at 16 31 36" src="https://github.com/user-attachments/assets/fef7d05e-cd31-42ed-9a3a-39f7c9d86de5" /> <img width="1013" height="934" alt="Screenshot 2025-08-27 at 16 31 54" src="https://github.com/user-attachments/assets/00d91f72-218d-4368-8774-91a0324d675c" />
+![Screenshot 2025-08-27 at 16 26 41](https://github.com/user-attachments/assets/8b1f2198-21a4-4db2-b7a6-e469b8a766df)
+![Screenshot 2025-08-27 at 16 27 08](https://github.com/user-attachments/assets/81126966-5cbf-46c1-a331-262ee2c4f86f)
+![Screenshot 2025-08-27 at 16 27 53](https://github.com/user-attachments/assets/a85b0630-51ea-4716-97b3-a39ba165d0a8)
+![Screenshot 2025-08-27 at 16 28 22](https://github.com/user-attachments/assets/2d96d0f5-b8fa-428b-88b2-470d249bb656)
+![Screenshot 2025-08-27 at 16 28 36](https://github.com/user-attachments/assets/dd384314-af29-4124-8e5f-794d4ac0ee06)
+![Screenshot 2025-08-27 at 16 29 03](https://github.com/user-attachments/assets/bf0c20fb-217c-479a-bf37-d7fb46d78b45)
+![Screenshot 2025-08-27 at 16 30 03](https://github.com/user-attachments/assets/dfef496a-a4c2-4f6c-a1d7-5024680231dd)
+![Screenshot 2025-08-27 at 16 31 13](https://github.com/user-attachments/assets/c9927bcc-016e-4b99-8a59-2a526670c1ed)
+![Screenshot 2025-08-27 at 16 31 23](https://github.com/user-attachments/assets/d9737049-7c0a-4ef8-9aa0-5a728ca3f5b9)
+![Screenshot 2025-08-27 at 16 31 36](https://github.com/user-attachments/assets/fef7d05e-cd31-42ed-9a3a-39f7c9d86de5)
+![Screenshot 2025-08-27 at 16 31 54](https://github.com/user-attachments/assets/00d91f72-218d-4368-8774-91a0324d675c)
 
 ---
 
