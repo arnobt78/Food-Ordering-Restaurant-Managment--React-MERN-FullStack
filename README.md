@@ -1,10 +1,25 @@
-# 🍕 Food Ordering Platform - Full Stack MERN Application
+# BigHungers Food Ordering Platform - React, Express.js FullStack MERN Project
 
-<img width="1358" height="917" alt="Screenshot 2025-09-01 at 15 44 06" src="https://github.com/user-attachments/assets/ca1e8188-6070-4742-893b-c4e75f27286e" /> <img width="1368" height="911" alt="Screenshot 2025-09-01 at 15 45 22" src="https://github.com/user-attachments/assets/e07cdafd-b592-4232-9df7-2eaeaa0ae1b4" /> <img width="1360" height="913" alt="Screenshot 2025-09-01 at 15 45 47" src="https://github.com/user-attachments/assets/1d76489d-8c83-47d8-9482-06c737e7c0dd" /> <img width="1027" height="740" alt="Screenshot 2025-09-01 at 15 46 09" src="https://github.com/user-attachments/assets/4f754a71-b5c1-4f92-8cde-eaf71152631f" /> <img width="1318" height="927" alt="Screenshot 2025-09-01 at 15 47 13" src="https://github.com/user-attachments/assets/5038042a-684c-4c1d-8536-372142d8b102" /> <img width="1355" height="930" alt="Screenshot 2025-09-01 at 15 47 56" src="https://github.com/user-attachments/assets/4876c243-6f70-4f05-a3cc-58f9ec301005" /> <img width="1349" height="944" alt="Screenshot 2025-09-01 at 15 48 16" src="https://github.com/user-attachments/assets/815a1ea6-122e-4631-af15-68f00f3addd2" /> <img width="1346" height="943" alt="Screenshot 2025-09-01 at 15 48 25" src="https://github.com/user-attachments/assets/b4df32e9-21c6-4344-b457-aacbf51e696e" /> <img width="1318" height="947" alt="Screenshot 2025-09-01 at 15 48 34" src="https://github.com/user-attachments/assets/63632191-2c7b-4132-9897-47a11426230f" /> <img width="1343" height="926" alt="Screenshot 2025-09-01 at 15 49 24" src="https://github.com/user-attachments/assets/8805ed2a-991d-458d-8cac-51021c4f5b6a" /> <img width="1343" height="914" alt="Screenshot 2025-09-01 at 15 49 54" src="https://github.com/user-attachments/assets/5d726738-c14b-4eac-8d30-0ee8fbf02f10" /> <img width="1339" height="935" alt="Screenshot 2025-09-01 at 15 50 29" src="https://github.com/user-attachments/assets/05c0589d-3603-4da1-8584-57f29a553be3" /> <img width="1332" height="932" alt="Screenshot 2025-09-01 at 15 50 42" src="https://github.com/user-attachments/assets/7a024ad6-2cb6-4dea-a5b1-df85fa076d5d" />
+![Screenshot 2025-09-01 at 15 44 06](https://github.com/user-attachments/assets/ca1e8188-6070-4742-893b-c4e75f27286e)
+![Screenshot 2025-09-01 at 15 45 22](https://github.com/user-attachments/assets/e07cdafd-b592-4232-9df7-2eaeaa0ae1b4)
+![Screenshot 2025-09-01 at 15 45 47](https://github.com/user-attachments/assets/1d76489d-8c83-47d8-9482-06c737e7c0dd)
+![Screenshot 2025-09-01 at 15 46 09](https://github.com/user-attachments/assets/4f754a71-b5c1-4f92-8cde-eaf71152631f)
+![Screenshot 2025-09-01 at 15 47 13](https://github.com/user-attachments/assets/5038042a-684c-4c1d-8536-372142d8b102)
+![Screenshot 2025-09-01 at 15 47 56](https://github.com/user-attachments/assets/4876c243-6f70-4f05-a3cc-58f9ec301005)
+![Screenshot 2025-09-01 at 15 48 16](https://github.com/user-attachments/assets/815a1ea6-122e-4631-af15-68f00f3addd2)
+![Screenshot 2025-09-01 at 15 48 25](https://github.com/user-attachments/assets/b4df32e9-21c6-4344-b457-aacbf51e696e)
+![Screenshot 2025-09-01 at 15 48 34](https://github.com/user-attachments/assets/63632191-2c7b-4132-9897-47a11426230f)
+![Screenshot 2025-09-01 at 15 49 24](https://github.com/user-attachments/assets/8805ed2a-991d-458d-8cac-51021c4f5b6a)
+![Screenshot 2025-09-01 at 15 49 54](https://github.com/user-attachments/assets/5d726738-c14b-4eac-8d30-0ee8fbf02f10)
+![Screenshot 2025-09-01 at 15 50 29](https://github.com/user-attachments/assets/05c0589d-3603-4da1-8584-57f29a553be3)
+![Screenshot 2025-09-01 at 15 50 42](https://github.com/user-attachments/assets/7a024ad6-2cb6-4dea-a5b1-df85fa076d5d)
 
 ---
 
 A comprehensive, modern food ordering platform built with the MERN stack (MongoDB, Express.js, React, Node.js) featuring real-time order management, payment processing, analytics dashboard, and advanced search capabilities.
+
+- **Frontend-Live:** [https://mern-food-ordering.netlify.app/](https://mern-food-ordering.netlify.app/)
+- **Backend-Live:** [https://mern-food-ordering-hnql.onrender.com](https://mern-food-ordering-hnql.onrender.com)
 
 ![Food Ordering Platform](https://img.shields.io/badge/React-18.2.0-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.3.3-blue)
