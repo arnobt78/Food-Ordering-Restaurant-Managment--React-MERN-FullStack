@@ -1,6 +1,6 @@
 import { OrderStatus } from "@/types";
 import { toast } from "sonner";
-import { CheckCircle, AlertCircle, Clock, Truck, ChefHat } from "lucide-react";
+import { CheckCircle, AlertCircle, Truck, ChefHat } from "lucide-react";
 
 interface OrderStatusToastProps {
   status: OrderStatus;

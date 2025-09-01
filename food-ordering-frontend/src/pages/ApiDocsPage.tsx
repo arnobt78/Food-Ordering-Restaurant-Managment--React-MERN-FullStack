@@ -12,16 +12,12 @@ import {
   TabsList,
   TabsTrigger,
 } from "../components/ui/tabs";
-import { Separator } from "../components/ui/separator";
 import { Button } from "../components/ui/button";
 import {
   Copy,
-  ExternalLink,
   Code,
   Database,
   CreditCard,
-  User,
-  Store,
 } from "lucide-react";
 
 const ApiDocsPage = () => {

@@ -7,7 +7,6 @@ import {
   CardTitle,
 } from "../components/ui/card";
 import { Badge } from "../components/ui/badge";
-import { Progress } from "../components/ui/progress";
 import {
   Tabs,
   TabsContent,
@@ -23,11 +22,8 @@ import {
   Users,
   Clock,
   MapPin,
-  Star,
   BarChart3,
   PieChart,
-  Calendar,
-  Filter,
   Download,
   RefreshCw,
 } from "lucide-react";
@@ -52,7 +48,7 @@ interface AnalyticsData {
 }
 
 const AnalyticsDashboardPage = () => {
-  const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
+  const [analyticsData] = useState<AnalyticsData>({
     totalOrders: 1247,
     totalRevenue: 45678.9,
     averageOrderValue: 36.62,

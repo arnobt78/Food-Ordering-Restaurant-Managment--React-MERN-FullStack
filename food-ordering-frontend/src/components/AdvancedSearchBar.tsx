@@ -2,7 +2,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Form, FormControl, FormField, FormItem, FormLabel } from "./ui/form";
-import { Search, Filter, MapPin, Star, DollarSign, Clock } from "lucide-react";
+import { Search, Filter, Star, DollarSign, Clock } from "lucide-react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { useEffect, useState } from "react";
@@ -11,7 +11,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Slider } from "./ui/slider";
 import { Checkbox } from "./ui/checkbox";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "./ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "./ui/select";
 
 const formSchema = z.object({
   city: z.string().optional(),
@@ -51,7 +57,7 @@ const AdvancedSearchBar = ({
 }: Props) => {
   const [selectedCity, setSelectedCity] = useState(city || "");
   const [showAdvanced, setShowAdvanced] = useState(isAdvanced);
-  
+
   const form = useForm<AdvancedSearchForm>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -71,8 +77,8 @@ const AdvancedSearchBar = ({
   });
 
   useEffect(() => {
-    form.reset({ 
-      searchQuery, 
+    form.reset({
+      searchQuery,
       city: selectedCity,
       priceRange: [0, 100],
       rating: 0,
@@ -121,8 +127,18 @@ const AdvancedSearchBar = ({
   };
 
   const cuisineOptions = [
-    "Italian", "Chinese", "Mexican", "Indian", "Japanese", "Thai", 
-    "American", "Mediterranean", "French", "Greek", "Korean", "Vietnamese"
+    "Italian",
+    "Chinese",
+    "Mexican",
+    "Indian",
+    "Japanese",
+    "Thai",
+    "American",
+    "Mediterranean",
+    "French",
+    "Greek",
+    "Korean",
+    "Vietnamese",
   ];
 
   const sortOptions = [
@@ -131,17 +147,14 @@ const AdvancedSearchBar = ({
     { value: "deliveryTime", label: "Fastest Delivery" },
     { value: "priceLow", label: "Price: Low to High" },
     { value: "priceHigh", label: "Price: High to Low" },
-    { value: "distance", label: "Nearest First" }
+    { value: "distance", label: "Nearest First" },
   ];
 
   return (
     <div className="space-y-4">
       {/* Basic Search */}
       <Form {...form}>
-        <form
-          onSubmit={form.handleSubmit(onSubmit)}
-          className="space-y-4"
-        >
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
@@ -157,7 +170,10 @@ const AdvancedSearchBar = ({
                   className="ml-1 text-orange-500 hidden md:block"
                 />
                 <div className="flex flex-1 items-center gap-2">
-                  <CityDropdown value={selectedCity} onChange={handleCityChange} />
+                  <CityDropdown
+                    value={selectedCity}
+                    onChange={handleCityChange}
+                  />
                   <FormField
                     control={form.control}
                     name="searchQuery"
@@ -186,7 +202,7 @@ const AdvancedSearchBar = ({
                   Search
                 </Button>
               </div>
-              
+
               <div className="flex items-center justify-between mt-4">
                 <Button
                   type="button"
@@ -254,7 +270,11 @@ const AdvancedSearchBar = ({
                       render={({ field }) => (
                         <FormItem>
                           <FormControl>
-                            <Select onValueChange={(value) => field.onChange(Number(value))}>
+                            <Select
+                              onValueChange={(value) =>
+                                field.onChange(Number(value))
+                              }
+                            >
                               <SelectTrigger>
                                 <SelectValue placeholder="Select rating" />
                               </SelectTrigger>
@@ -283,7 +303,11 @@ const AdvancedSearchBar = ({
                       render={({ field }) => (
                         <FormItem>
                           <FormControl>
-                            <Select onValueChange={(value) => field.onChange(Number(value))}>
+                            <Select
+                              onValueChange={(value) =>
+                                field.onChange(Number(value))
+                              }
+                            >
                               <SelectTrigger>
                                 <SelectValue placeholder="Select time" />
                               </SelectTrigger>
@@ -316,7 +340,10 @@ const AdvancedSearchBar = ({
                               </SelectTrigger>
                               <SelectContent>
                                 {sortOptions.map((option) => (
-                                  <SelectItem key={option.value} value={option.value}>
+                                  <SelectItem
+                                    key={option.value}
+                                    value={option.value}
+                                  >
                                     {option.label}
                                   </SelectItem>
                                 ))}
@@ -345,9 +372,16 @@ const AdvancedSearchBar = ({
                                   onCheckedChange={(checked) => {
                                     const currentCuisines = field.value || [];
                                     if (checked) {
-                                      field.onChange([...currentCuisines, cuisine]);
+                                      field.onChange([
+                                        ...currentCuisines,
+                                        cuisine,
+                                      ]);
                                     } else {
-                                      field.onChange(currentCuisines.filter(c => c !== cuisine));
+                                      field.onChange(
+                                        currentCuisines.filter(
+                                          (c) => c !== cuisine
+                                        )
+                                      );
                                     }
                                   }}
                                 />
@@ -466,43 +500,69 @@ const AdvancedSearchBar = ({
                 <div className="mt-6">
                   <FormLabel>Active Filters:</FormLabel>
                   <div className="flex flex-wrap gap-2 mt-2">
-                    {form.watch("rating") > 0 && (
-                      <Badge variant="secondary" className="bg-orange-100 text-orange-800">
+                    {form.watch("rating") && form.watch("rating")! > 0 && (
+                      <Badge
+                        variant="secondary"
+                        className="bg-orange-100 text-orange-800"
+                      >
                         {form.watch("rating")}+ Stars
                       </Badge>
                     )}
-                    {form.watch("deliveryTime") < 60 && (
-                      <Badge variant="secondary" className="bg-blue-100 text-blue-800">
-                        < {form.watch("deliveryTime")} min delivery
-                      </Badge>
-                    )}
+                    {form.watch("deliveryTime") &&
+                      form.watch("deliveryTime")! < 60 && (
+                        <Badge
+                          variant="secondary"
+                          className="bg-blue-100 text-blue-800"
+                        >
+                          &lt; {form.watch("deliveryTime")} min delivery
+                        </Badge>
+                      )}
                     {form.watch("cuisines")?.map((cuisine) => (
-                      <Badge key={cuisine} variant="secondary" className="bg-green-100 text-green-800">
+                      <Badge
+                        key={cuisine}
+                        variant="secondary"
+                        className="bg-green-100 text-green-800"
+                      >
                         {cuisine}
                       </Badge>
                     ))}
                     {form.watch("vegetarian") && (
-                      <Badge variant="secondary" className="bg-purple-100 text-purple-800">
+                      <Badge
+                        variant="secondary"
+                        className="bg-purple-100 text-purple-800"
+                      >
                         Vegetarian
                       </Badge>
                     )}
                     {form.watch("vegan") && (
-                      <Badge variant="secondary" className="bg-purple-100 text-purple-800">
+                      <Badge
+                        variant="secondary"
+                        className="bg-purple-100 text-purple-800"
+                      >
                         Vegan
                       </Badge>
                     )}
                     {form.watch("glutenFree") && (
-                      <Badge variant="secondary" className="bg-purple-100 text-purple-800">
+                      <Badge
+                        variant="secondary"
+                        className="bg-purple-100 text-purple-800"
+                      >
                         Gluten-Free
                       </Badge>
                     )}
                     {form.watch("openNow") && (
-                      <Badge variant="secondary" className="bg-green-100 text-green-800">
+                      <Badge
+                        variant="secondary"
+                        className="bg-green-100 text-green-800"
+                      >
                         Open Now
                       </Badge>
                     )}
                     {form.watch("freeDelivery") && (
-                      <Badge variant="secondary" className="bg-green-100 text-green-800">
+                      <Badge
+                        variant="secondary"
+                        className="bg-green-100 text-green-800"
+                      >
                         Free Delivery
                       </Badge>
                     )}

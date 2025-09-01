@@ -17,7 +17,6 @@ export const useCitySearch = () => {
         setFilteredCities(data.cities || []);
         setLoading(false);
       })
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       .catch((_error) => {
         setError("Failed to fetch cities");
         setLoading(false);
