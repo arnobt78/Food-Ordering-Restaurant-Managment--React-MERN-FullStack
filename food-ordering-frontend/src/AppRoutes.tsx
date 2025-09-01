@@ -8,6 +8,10 @@ import ManageRestaurantPage from "./pages/ManageRestaurantPage";
 import SearchPage from "./pages/SearchPage";
 import DetailPage from "./pages/DetailPage";
 import OrderStatusPage from "./pages/OrderStatusPage";
+import ApiDocsPage from "./pages/ApiDocsPage";
+import ApiStatusPage from "./pages/ApiStatusPage";
+import AnalyticsDashboardPage from "./pages/AnalyticsDashboardPage";
+import PerformancePage from "./pages/PerformancePage";
 
 const AppRoutes = () => {
   return (
@@ -37,6 +41,22 @@ const AppRoutes = () => {
           </Layout>
         }
       />
+      <Route
+        path="/api-docs"
+        element={
+          <Layout showHero={false}>
+            <ApiDocsPage />
+          </Layout>
+        }
+      />
+      <Route
+        path="/api-status"
+        element={
+          <Layout showHero={false}>
+            <ApiStatusPage />
+          </Layout>
+        }
+      />
       <Route element={<ProtectedRoute />}>
         <Route
           path="/order-status"
@@ -59,6 +79,22 @@ const AppRoutes = () => {
           element={
             <Layout>
               <ManageRestaurantPage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/analytics"
+          element={
+            <Layout>
+              <AnalyticsDashboardPage />
+            </Layout>
+          }
+        />
+        <Route
+          path="/performance"
+          element={
+            <Layout>
+              <PerformancePage />
             </Layout>
           }
         />

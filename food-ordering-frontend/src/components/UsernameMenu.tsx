@@ -9,18 +9,33 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { Link } from "react-router-dom";
 import { Separator } from "./ui/separator";
 import { Button } from "./ui/button";
+import { useState } from "react";
 
 const UsernameMenu = () => {
   const { user, logout } = useAuth0();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleMenuClick = () => {
+    setIsOpen(false);
+  };
+
+  const handleLogout = () => {
+    // Clear all cartItems from sessionStorage on logout
+    Object.keys(sessionStorage).forEach((key) => {
+      if (key.startsWith("cartItems-")) sessionStorage.removeItem(key);
+    });
+    logout();
+    setIsOpen(false);
+  };
 
   return (
-    <DropdownMenu>
+    <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
       <DropdownMenuTrigger className="flex items-center px-3 font-bold hover:text-orange-500 gap-2">
         <CircleUserRound className="text-orange-500" />
         {user?.email}
       </DropdownMenuTrigger>
       <DropdownMenuContent>
-        <DropdownMenuItem>
+        <DropdownMenuItem onClick={handleMenuClick}>
           <Link
             to="/manage-restaurant"
             className="font-bold hover:text-orange-500"
@@ -28,7 +43,7 @@ const UsernameMenu = () => {
             Manage Restaurant
           </Link>
         </DropdownMenuItem>
-        <DropdownMenuItem>
+        <DropdownMenuItem onClick={handleMenuClick}>
           <Link to="/user-profile" className="font-bold hover:text-orange-500">
             User Profile
           </Link>
@@ -36,14 +51,7 @@ const UsernameMenu = () => {
         <Separator />
         <DropdownMenuItem>
           <Button
-            onClick={() => {
-              // Clear all cartItems from sessionStorage on logout
-              Object.keys(sessionStorage).forEach((key) => {
-                if (key.startsWith("cartItems-"))
-                  sessionStorage.removeItem(key);
-              });
-              logout();
-            }}
+            onClick={handleLogout}
             className="flex flex-1 font-bold bg-orange-500"
           >
             Log Out

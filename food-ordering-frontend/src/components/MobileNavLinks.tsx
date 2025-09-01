@@ -13,6 +13,30 @@ const MobileNavLinks = () => {
   return (
     <>
       <Link
+        to="/api-docs"
+        className="flex bg-white items-center font-bold hover:text-orange-500"
+      >
+        API Docs
+      </Link>
+      <Link
+        to="/api-status"
+        className="flex bg-white items-center font-bold hover:text-orange-500"
+      >
+        API Status
+      </Link>
+      <Link
+        to="/analytics"
+        className="flex bg-white items-center font-bold hover:text-orange-500"
+      >
+        Analytics
+      </Link>
+      <Link
+        to="/performance"
+        className="flex bg-white items-center font-bold hover:text-orange-500"
+      >
+        Performance
+      </Link>
+      <Link
         to="/order-status"
         className="flex bg-white items-center font-bold hover:text-orange-500"
       >

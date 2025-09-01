@@ -2,6 +2,11 @@ import { Order, Restaurant } from "@/types";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useMutation, useQuery } from "react-query";
 import { toast } from "sonner";
+import { useEffect } from "react";
+import {
+  showOrderStatusToast,
+  showOrderErrorToast,
+} from "@/components/OrderStatusToast";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
@@ -62,13 +67,17 @@ export const useCreateMyRestaurant = () => {
     error,
   } = useMutation(createMyRestaurantRequest);
 
-  if (isSuccess) {
-    toast.success("Restaurant created!");
-  }
+  useEffect(() => {
+    if (isSuccess) {
+      toast.success("Restaurant created successfully!");
+    }
+  }, [isSuccess]);
 
-  if (error) {
-    toast.error("Unable to update restaurant");
-  }
+  useEffect(() => {
+    if (error) {
+      toast.error("Unable to create restaurant");
+    }
+  }, [error]);
 
   return { createRestaurant, isLoading };
 };
@@ -103,13 +112,17 @@ export const useUpdateMyRestaurant = () => {
     isSuccess,
   } = useMutation(updateRestaurantRequest);
 
-  if (isSuccess) {
-    toast.success("Restaurant Updated");
-  }
+  useEffect(() => {
+    if (isSuccess) {
+      toast.success("Restaurant updated successfully!");
+    }
+  }, [isSuccess]);
 
-  if (error) {
-    toast.error("Unable to update restaurant");
-  }
+  useEffect(() => {
+    if (error) {
+      toast.error("Unable to update restaurant");
+    }
+  }, [error]);
 
   return { updateRestaurant, isLoading };
 };
@@ -134,12 +147,17 @@ export const useGetMyRestaurantOrders = () => {
     return response.json();
   };
 
-  const { data: orders, isLoading } = useQuery(
-    "fetchMyRestaurantOrders",
-    getMyRestaurantOrdersRequest
-  );
+  const {
+    data: orders,
+    isLoading,
+    refetch,
+  } = useQuery("fetchMyRestaurantOrders", getMyRestaurantOrdersRequest, {
+    refetchInterval: 5000, // Refetch every 5 seconds
+    refetchOnWindowFocus: true,
+    staleTime: 0, // Consider data stale immediately
+  });
 
-  return { orders, isLoading };
+  return { orders, isLoading, refetch };
 };
 
 type UpdateOrderStatusRequest = {
@@ -180,16 +198,27 @@ export const useUpdateMyRestaurantOrder = () => {
     isError,
     isSuccess,
     reset,
+    data: updatedOrder,
   } = useMutation(updateMyRestaurantOrder);
 
-  if (isSuccess) {
-    toast.success("Order updated");
-  }
+  // Use useEffect to prevent duplicate toasts
+  useEffect(() => {
+    if (isSuccess && updatedOrder) {
+      showOrderStatusToast({
+        status: updatedOrder.status,
+        customerName: updatedOrder.deliveryDetails.name,
+        orderId: updatedOrder._id,
+      });
+      reset(); // Reset the mutation state to prevent duplicate toasts
+    }
+  }, [isSuccess, updatedOrder, reset]);
 
-  if (isError) {
-    toast.error("Unable to update order");
-    reset();
-  }
+  useEffect(() => {
+    if (isError) {
+      showOrderErrorToast("Unable to update order status. Please try again.");
+      reset();
+    }
+  }, [isError, reset]);
 
   return { updateRestaurantStatus, isLoading };
 };
