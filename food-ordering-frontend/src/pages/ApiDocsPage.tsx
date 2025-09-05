@@ -20,7 +20,7 @@ const ApiDocsPage = () => {
     navigator.clipboard.writeText(text);
   };
 
-  const baseUrl = "http://localhost:7001";
+  const baseUrl = import.meta.env.VITE_API_BASE_URL || "http://localhost:7001";
 
   const endpoints = [
     {

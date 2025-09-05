@@ -3,11 +3,6 @@
 [build]
   publish = "dist"
 
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
-
 # Redirect all requests to index.html for client-side routing (SPA)
 [[redirects]]
   from = "/*"

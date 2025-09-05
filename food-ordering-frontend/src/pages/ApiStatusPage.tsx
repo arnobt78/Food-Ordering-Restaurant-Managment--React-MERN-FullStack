@@ -52,7 +52,9 @@ const ApiStatusPage = () => {
       name: "API Server",
       status: "healthy",
       responseTime: 45,
-      endpoint: "http://localhost:7001/health",
+      endpoint: `${
+        import.meta.env.VITE_API_BASE_URL || "http://localhost:7001"
+      }/health`,
       description: "Main API server health check",
     },
     {
@@ -101,14 +103,16 @@ const ApiStatusPage = () => {
       const startTime = Date.now();
 
       // Check API Server health
-      const apiResponse = await fetch("http://localhost:7001/health");
+      const apiBaseUrl =
+        import.meta.env.VITE_API_BASE_URL || "http://localhost:7001";
+      const apiResponse = await fetch(`${apiBaseUrl}/health`);
       const apiEndTime = Date.now();
       const apiResponseTime = apiEndTime - startTime;
 
       // Check Database health via business insights endpoint
       const dbStartTime = Date.now();
       const dbResponse = await fetch(
-        "http://localhost:7001/api/business-insights/db-test"
+        `${apiBaseUrl}/api/business-insights/db-test`
       );
       const dbEndTime = Date.now();
       const dbResponseTime = dbEndTime - dbStartTime;
