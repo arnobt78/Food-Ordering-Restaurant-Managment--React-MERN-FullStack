@@ -546,16 +546,18 @@ const handleCheckout = async () => {
 
 1. **Build the application**
 
-```bash
-cd food-ordering-frontend
-npm run build
-```
+   ```bash
+   cd food-ordering-frontend
+   npm run build
+   ```
 
 2. **Deploy to Vercel**
 
-```bash
-vercel --prod
-```
+   ```bash
+   vercel --prod
+   ```
+
+````
 
 3. **Set environment variables in Vercel dashboard**
 
@@ -563,18 +565,24 @@ vercel --prod
 
 1. **Prepare for production**
 
-```bash
+   ```bash
 cd food-ordering-backend
 npm run build
-```
+````
 
 2. **Deploy to Railway/Render**
 
-```bash
+   ```bash
+
+   ```
+
 # Connect your GitHub repository
+
 # Set environment variables
+
 # Deploy automatically
-```
+
+````
 
 3. **Update frontend API URL**
 
@@ -587,7 +595,7 @@ VITE_API_BASE_URL="https://your-api.railway.app"
 
 # Production Stripe keys
 STRIPE_API_KEY="sk_live_your-production-key"
-```
+````
 
 ---
 

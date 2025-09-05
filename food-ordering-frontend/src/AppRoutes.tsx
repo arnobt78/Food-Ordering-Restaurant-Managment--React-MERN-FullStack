@@ -83,7 +83,7 @@ const AppRoutes = () => {
           }
         />
         <Route
-          path="/analytics"
+          path="/business-insights"
           element={
             <Layout>
               <AnalyticsDashboardPage />

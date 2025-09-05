@@ -16,7 +16,10 @@ const MainNav = () => {
       </Link>
       {isAuthenticated ? (
         <>
-          <Link to="/analytics" className="font-bold hover:text-orange-500">
+          <Link
+            to="/business-insights"
+            className="font-bold hover:text-orange-500"
+          >
             Analytics
           </Link>
           <Link to="/performance" className="font-bold hover:text-orange-500">

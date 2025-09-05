@@ -25,7 +25,7 @@ const MobileNavLinks = () => {
         API Status
       </Link>
       <Link
-        to="/analytics"
+        to="/business-insights"
         className="flex bg-white items-center font-bold hover:text-orange-500"
       >
         Analytics

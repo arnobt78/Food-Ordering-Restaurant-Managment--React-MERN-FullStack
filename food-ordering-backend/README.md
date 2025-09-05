@@ -102,6 +102,10 @@ food-ordering-backend/
 - `GET /api/my/restaurant/order` — Get all orders for your restaurant
 - `PATCH /api/my/restaurant/order/:orderId/status` — Update order status
 
+### Business Insights
+
+- `GET /api/business-insights` — Get analytics and business insights data
+
 ---
 
 ## Environment Variables (.env)

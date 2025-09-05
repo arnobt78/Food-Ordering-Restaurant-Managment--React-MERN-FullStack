@@ -7,6 +7,7 @@ import { v2 as cloudinary } from "cloudinary";
 import myRestaurantRoute from "./routes/MyRestaurantRoute";
 import restaurantRoute from "./routes/RestaurantRoute";
 import orderRoute from "./routes/OrderRoute";
+import analyticsRoute from "./routes/AnalyticsRoute";
 
 mongoose
   .connect(process.env.MONGODB_URI as string)
@@ -20,7 +21,22 @@ cloudinary.config({
 
 const app = express();
 
-app.use(cors());
+// Track server start time for uptime calculation
+const serverStartTime = Date.now();
+
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",
+      "http://localhost:3000",
+      "https://mern-food-ordering.netlify.app",
+      "https://mern-food-ordering-hnql.onrender.com",
+    ],
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 
 app.use("/api/order/checkout/webhook", express.raw({ type: "*/*" }));
 
@@ -34,13 +50,20 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 app.get("/health", async (req: Request, res: Response) => {
-  res.send({ message: "health OK!" });
+  const uptime = Math.floor((Date.now() - serverStartTime) / 1000);
+  res.json({
+    message: "health OK!",
+    uptime: uptime,
+    timestamp: new Date().toISOString(),
+    serverStartTime: new Date(serverStartTime).toISOString(),
+  });
 });
 
 app.use("/api/my/user", myUserRoute);
 app.use("/api/my/restaurant", myRestaurantRoute);
 app.use("/api/restaurant", restaurantRoute);
 app.use("/api/order", orderRoute);
+app.use("/api/business-insights", analyticsRoute);
 
 app.listen(7001, () => {
   console.log("server started on localhost:7001");
