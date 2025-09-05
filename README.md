@@ -1,4 +1,4 @@
-# BigHungers Food Ordering Platform - React, Express.js FullStack MERN Project
+# BigHungers - Food Ordering Management System - React, Express.js FullStack MERN Project
 
 ![Screenshot 2025-09-01 at 15 44 06](https://github.com/user-attachments/assets/ca1e8188-6070-4742-893b-c4e75f27286e)
 ![Screenshot 2025-09-01 at 15 45 22](https://github.com/user-attachments/assets/e07cdafd-b592-4232-9df7-2eaeaa0ae1b4)
