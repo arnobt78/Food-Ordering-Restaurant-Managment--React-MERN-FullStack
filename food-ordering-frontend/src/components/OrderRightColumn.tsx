@@ -122,7 +122,9 @@ const OrderRightColumn = ({ order }: Props) => {
             <div className="flex justify-between items-center">
               <span className="text-muted-foreground">Subtotal</span>
               <span className="font-medium">
-                {formatCurrency(order.totalAmount)}
+                {formatCurrency(
+                  order.totalAmount - order.restaurant.deliveryPrice
+                )}
               </span>
             </div>
             <div className="flex justify-between items-center">
@@ -134,11 +136,7 @@ const OrderRightColumn = ({ order }: Props) => {
             <Separator />
             <div className="flex justify-between items-center text-lg font-semibold">
               <span>Total</span>
-              <span>
-                {formatCurrency(
-                  order.totalAmount + order.restaurant.deliveryPrice
-                )}
-              </span>
+              <span>{formatCurrency(order.totalAmount)}</span>
             </div>
           </div>
         </CardContent>
